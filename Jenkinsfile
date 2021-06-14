@@ -89,7 +89,7 @@ pipeline {
             steps {
               dir ('./server'){
                   sh '''
-                  npm install&&
+                  pnpm install&&
                   npm run lint
                   '''
               }
@@ -107,7 +107,7 @@ pipeline {
 
             dir ('./server'){
                 sh '''
-                npm install
+                pnpm install
                 npm run test
                 '''
             }
